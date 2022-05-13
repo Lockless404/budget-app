@@ -96,6 +96,47 @@ button {
   margin: 2% 2.5%;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 .transactions {
   margin: 0 2.5%;
+}
+
+i {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.pageBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5fb523;
+}
+
+.greenButton {
+  border: 1px solid #fff;
+  background-color: #5fb523;
+  color: #fff;
+  width: 90vw;
+  height: 7vh;
+}
+
+.formDiv {
+  width: 100%;
+  margin: 1rem 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: #434b54;
 }

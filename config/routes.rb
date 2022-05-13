@@ -4,12 +4,19 @@ Rails.application.routes.draw do
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :users do
-    resources :groups, only: %i[index create new destroy] do
-      resources :purchases, only: %i[index create new destroy]
+  unauthenticated do
+    root "users#index"
+  end
+
+  devise_scope :user do
+    root 'groups#index', as: 'categories'
+    resources :users  do 
+      resources :groups, only: %i[index create new destroy] do
+        resources :purchases, only: %i[index create new destroy]
+      end
     end
   end
-  root 'users#index'
+  
 
   # Defines the root path route ("/")
   # root "articles#index"

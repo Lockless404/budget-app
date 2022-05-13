@@ -14,6 +14,7 @@ class Ability
     #   end
     can :manage, Group, user_id: user.id
     can :manage, Purchase, user_id: user.id
+    can :read, all
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions

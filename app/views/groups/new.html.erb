@@ -1,0 +1,19 @@
+<header>
+  <button class="backButton">
+    <i></i>
+  </button>
+  <h2>Add Catagories</h2>
+</header>
+<%= form_with url: user_groups_path(@user), method: :post, local: true, scope: :groups, :class => "page" do |form| %>
+  <div class="formDiv">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="formDiv">
+    <%= form.label :icon %>
+    <%= form.text_field :icon %>
+  </div>
+  <div class="pageBottom">
+    <%= form.submit 'Submit', :class => 'greenButton'  %>
+  </div>
+<% end %>

@@ -2,8 +2,8 @@
   <h1 class="frontHead">Budget</h1>
 </div>
 <div class="signButtons">
-  <button class="blueButton">Sign Up</button>
-  <button>Sign In</button>
+  <%= button_to "Sign Up", new_user_registration_path, :class => 'blueButton', :method => :get %>
+  <%= button_to "Sgin in", new_user_session_path, :method => :get %>
 </div>
 
 

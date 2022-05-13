@@ -6,24 +6,23 @@
 </header>
 <div class="page">
   <div class="card">
-    <div>
-      <i></i>
+    <div class="flex">
+      <i class="material-icons">restaurant</i>
       <h3>Food</h3>
     </div>
     <h3>R300</h3>
   </div>
-  <div class="card">
-    <div>
-      <i></i>
+  <a class="card">
+    <div class="flex">
+      <i class="material-icons">restaurant</i>
       <h3>Food</h3>
     </div>
     <h3>R300</h3>
-  </div>
-  <div class="card">
-    <div>
-      <i></i>
-      <h3>Food</h3>
-    </div>
-    <h3>R300</h3>
-  </div>
+  </a>
+  <%@groups.each do |group|%>
+  <%= render partial: "groups/card", locals: { group: group } %>
+  <% end %>
+</div>
+<div class="pageBottom">
+  <%= button_to "Add Categories", new_user_group_path(@user), :class => 'greenButton', :method => :get %>
 </div>
