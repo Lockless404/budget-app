@@ -1,8 +1,8 @@
 class PurchasesController < ApplicationController
   def index
     @user = current_user
-    @purchases = @user.purchases
     @group = Group.find(params[:group_id])
+    @purchases = @group.group_purchases
   end
 
   def new
@@ -25,6 +25,7 @@ class PurchasesController < ApplicationController
   end
 
   private
+
   def purchase_params
     params.require(:data).permit(:name, :amount, :group_id)
   end
