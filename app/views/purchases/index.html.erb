@@ -6,7 +6,7 @@
 </header>
 <div class="page">
   <% total = 0 %>
-  <%@purchases.each {|purchase| total += purchase.amount}%>
+  <%@purchases.each {|purchase| total += purchase.purchase.amount}%>
   <h1>R<%=total%></h1>
   <%@purchases.each do |purchase|%>
   <%= render partial: "purchases/link", locals: { purchase: purchase } %>
