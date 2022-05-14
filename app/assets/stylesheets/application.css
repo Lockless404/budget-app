@@ -13,3 +13,89 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(243, 243, 243);
+  color: #434b54;
+}
+
+header {
+  background-color: #3778c2;
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.backButton {
+  width: auto;
+}
+
+h2 {
+  margin-left: 25%;
+  color: aliceblue;
+}
+
+.home {
+  justify-content: center;
+}
+
+.page {
+  width: 95%;
+  height: 100%;
+  margin: 4rem 2.5% 0 2.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.frontHead {
+  font-style: italic;
+}
+
+.signButtons {
+  width: 95%;
+  margin: 0 2.5%;
+  position: absolute;
+  bottom: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 100%;
+  height: 4vh;
+  border-radius: 0;
+  border: 0;
+}
+
+.blueButton {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 93%;
+  padding: 1%;
+  margin: 2% 2.5%;
+}
+
+.transactions {
+  margin: 0 2.5%;
+}
