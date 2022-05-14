@@ -6,6 +6,10 @@
 
 ![screenshot](./transactions.png)
 
+## Demo
+
+ - [Checkout my demo](https://shielded-everglades-50642.herokuapp.com/)
+
 ## Built with
   - Ruby
   - Rails
