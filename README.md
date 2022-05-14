@@ -44,9 +44,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Original design idea by Gregoire Vella on Behance.
+- The Creative Commons license of the design credit to the author.
 
 ## 📝 License
 
