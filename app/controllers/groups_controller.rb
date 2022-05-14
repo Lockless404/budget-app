@@ -10,7 +10,7 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = current_user.groups.new(params.require(:groups).permit(:name, :icon))
+    @group = current_user.groups.new(params.require(:data).permit(:name, :icon))
     respond_to do |format|
       format.html do
         if @group.save

@@ -140,3 +140,12 @@ a {
   text-decoration: none;
   color: #434b54;
 }
+
+.arrow {
+  margin-left: 1rem;
+}
+
+.blue {
+  background-color: #3778c2;
+  color: #fff;
+}

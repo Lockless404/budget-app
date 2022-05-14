@@ -1,10 +1,10 @@
 <header>
-  <button class="backButton">
-    <i></i>
-  </button>
+  <%= link_to user_groups_path(user_id: @user.id ), :class => 'arrow' do %>
+    <i class="material-icons blue">arrow_back</i>
+  <% end %>
   <h2>Add Catagories</h2>
 </header>
-<%= form_with url: user_groups_path(@user), method: :post, local: true, scope: :groups, :class => "page" do |form| %>
+<%= form_with url: user_groups_path(@user), method: :post, local: true, scope: :data, :class => "page" do |form| %>
   <div class="formDiv">
     <%= form.label :name %>
     <%= form.text_field :name %>

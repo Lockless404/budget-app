@@ -3,5 +3,7 @@
     <i class="material-icons"><%=group.icon%></i>
     <h3><%=group.name%></h3>
   </div>
-  <h3>R300</h3>
+  <% total = 0 %>
+  <%group.group_purchases.each {|purchase| total += purchase.purchase.amount}%>
+  <h3>R<%=total%></h3>
 <% end %>
