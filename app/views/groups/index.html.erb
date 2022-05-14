@@ -1,29 +1,14 @@
 <header>
-  <button class="backButton">
-    <i></i>
-  </button>
+  <%= link_to users_path, :class => 'arrow' do %>
+    <i class="material-icons blue">arrow_back</i>
+  <% end %>
   <h2>Catagories</h2>
 </header>
 <div class="page">
-  <div class="card">
-    <div>
-      <i></i>
-      <h3>Food</h3>
-    </div>
-    <h3>R300</h3>
-  </div>
-  <div class="card">
-    <div>
-      <i></i>
-      <h3>Food</h3>
-    </div>
-    <h3>R300</h3>
-  </div>
-  <div class="card">
-    <div>
-      <i></i>
-      <h3>Food</h3>
-    </div>
-    <h3>R300</h3>
-  </div>
+  <%@groups.each do |group|%>
+  <%= render partial: "groups/card", locals: { group: group } %>
+  <% end %>
+</div>
+<div class="pageBottom">
+  <%= button_to "Add Categories", new_user_group_path(@user), :class => 'greenButton', :method => :get %>
 </div>
