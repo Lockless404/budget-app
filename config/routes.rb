@@ -15,8 +15,4 @@ Rails.application.routes.draw do
       resources :purchases, only: %i[index create new destroy]
     end
   end
-  
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

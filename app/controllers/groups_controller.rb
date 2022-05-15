@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
-    @user = current_user
     @groups = current_user.groups.includes(:group_purchases).includes(:purchases)
   end
 
