@@ -10,10 +10,9 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     root 'groups#index', as: 'categories'
-    resources :users  do 
-      resources :groups, only: %i[index create new destroy] do
-        resources :purchases, only: %i[index create new destroy]
-      end
+    resources :users 
+    resources :groups, only: %i[index create new destroy] do
+      resources :purchases, only: %i[index create new destroy]
     end
   end
   

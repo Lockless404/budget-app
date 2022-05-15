@@ -1,11 +1,10 @@
 class GroupsController < ApplicationController
   def index
     @user = current_user
-    @groups = Group.where(user_id: current_user.id)
+    @groups = current_user.groups.includes(:group_purchases).includes(:purchases)
   end
 
   def new
-    @user = current_user
     @group = Group.new
   end
 
@@ -14,7 +13,7 @@ class GroupsController < ApplicationController
     respond_to do |format|
       format.html do
         if @group.save
-          redirect_to user_groups_path(@group.user), notice: 'Group successfully created'
+          redirect_to groups_path, notice: 'Group successfully created'
         else
           flash.now[:error] = 'Error: Group could not be saved'
           render :new, locals: { group: @group }
