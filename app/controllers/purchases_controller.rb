@@ -1,12 +1,11 @@
 class PurchasesController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @user = current_user
     @group = Group.find(params[:group_id])
     @purchases = @group.group_purchases
   end
 
   def new
-    @user = current_user
     @group = Group.find(params[:group_id])
     @purchase = Purchase.new
   end
@@ -17,7 +16,7 @@ class PurchasesController < ApplicationController
     GroupPurchase.create(group: @group, purchase: @purchase)
     if @purchase.save
       flash.notice = 'Purchase was successfully created.'
-      redirect_to user_group_purchases_path(params[:user_id], params[:group_id])
+      redirect_to group_purchases_path(params[:group_id])
     else
       flash.alert = 'Purchase was not created.'
       render :new
