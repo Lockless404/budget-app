@@ -1,0 +1,9 @@
+<%= link_to group_purchases_path( group.id ), :class => 'card' do %>
+  <div class="flex">
+    <i class="material-icons"><%=group.icon%></i>
+    <h3><%=group.name%></h3>
+  </div>
+  <% total = 0 %>
+  <%group.group_purchases.each {|purchase| total += purchase.purchase.amount}%>
+  <h3>R<%=total%></h3>
+<% end %>

@@ -1,0 +1,19 @@
+<header>
+  <%= link_to group_purchases_path(group_id: @group.id), :class => 'arrow' do %>
+    <i class="material-icons blue">arrow_back</i>
+  <% end %>
+  <h2>Add Purchase</h2>
+</header>
+<%= form_with url: group_purchases_path, method: :post, local: true, scope: :data, :class => "page" do |form| %>
+  <div class="formDiv">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="formDiv">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+  <div class="pageBottom">
+    <%= form.submit 'Submit', :class => 'greenButton'  %>
+  </div>
+<% end %>
