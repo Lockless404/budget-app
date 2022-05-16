@@ -8,7 +8,7 @@
 
 ## Demo
 
- - [Checkout my demo](https://guarded-sierra-74117.herokuapp.com/)
+ - [Checkout my demo](https://nameless-ocean-82567.herokuapp.com/)
 
 ## Built with
   - Ruby
