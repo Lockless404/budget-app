@@ -8,7 +8,7 @@
 
 ## Demo
 
- - [Checkout my demo](https://shielded-everglades-50642.herokuapp.com/)
+ - [Checkout my demo](https://guarded-sierra-74117.herokuapp.com/)
 
 ## Built with
   - Ruby
