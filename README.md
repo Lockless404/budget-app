@@ -8,7 +8,7 @@
 
 ## Demo
 
- - [Checkout my demo](https://nameless-ocean-82567.herokuapp.com/)
+ - [Checkout my demo](https://budget-app-w63y.onrender.com/)
 
 ## Built with
   - Ruby
